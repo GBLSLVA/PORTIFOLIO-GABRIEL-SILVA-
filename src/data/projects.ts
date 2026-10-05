@@ -14,9 +14,12 @@ export const projects: Project[] = [
   {
     title: 'ZEUS Finance',
     description:
-      'Painel responsivo de monitoramento financeiro pessoal para acompanhar gastos, dívidas, metas e orçamento.',
-    technologies: ['JavaScript', 'Node.js', 'SQLite'],
+      'Aplicação full stack de gestão financeira com autenticação, painel de gastos, dívidas, metas, orçamentos e persistência de dados.',
+    technologies: ['React', 'TypeScript', 'Node.js', 'PostgreSQL'],
     github: 'https://github.com/GBLSLVA/zeus-finance',
+    demo: 'https://zeus-finance-production.up.railway.app',
+    image: '/zeus-finance-preview.svg',
+    imageAlt: 'Tela de login do ZEUS Finance em tema escuro com detalhes verdes',
     featured: true,
     status: 'Destaque',
   },

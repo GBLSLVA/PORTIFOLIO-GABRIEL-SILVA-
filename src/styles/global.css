@@ -415,3 +415,223 @@ footer {
     animation-iteration-count: 1 !important;
   }
 }
+
+
+/* Project showcase */
+.project-layout {
+  display: grid;
+  gap: 42px;
+}
+
+.project-layout--visual {
+  grid-template-columns: minmax(280px, 0.7fr) minmax(0, 1.3fr);
+  align-items: center;
+}
+
+.project-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+.project-links a {
+  display: inline-block;
+  border-bottom: 1px solid #111;
+  padding-bottom: 3px;
+}
+
+.project-visual-link {
+  display: block;
+  min-width: 0;
+  perspective: 1600px;
+}
+
+.project-visual {
+  position: relative;
+  overflow: visible;
+  border: 1px solid rgba(17, 17, 17, 0.22);
+  border-radius: 24px;
+  background: #111;
+  box-shadow:
+    0 30px 80px rgba(17, 17, 17, 0.18),
+    0 3px 10px rgba(17, 17, 17, 0.08);
+  transform: rotateY(-3deg) rotateX(1deg);
+  transform-origin: center center;
+  transition:
+    transform 520ms cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 520ms ease;
+  animation: projectReveal 900ms 120ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.project-visual::after {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    115deg,
+    transparent 24%,
+    rgba(255, 255, 255, 0.16) 46%,
+    transparent 66%
+  );
+  content: '';
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-70%);
+  transition:
+    opacity 320ms ease,
+    transform 800ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.project-visual-link:hover .project-visual {
+  box-shadow:
+    0 42px 110px rgba(17, 17, 17, 0.24),
+    0 8px 24px rgba(17, 17, 17, 0.12);
+  transform: translateY(-9px) rotateY(0deg) rotateX(0deg);
+}
+
+.project-visual-link:hover .project-visual::after {
+  opacity: 0.72;
+  transform: translateX(72%);
+}
+
+.project-browser-bar {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 14px;
+  min-height: 44px;
+  padding: 0 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 23px 23px 0 0;
+  background: #0a0d10;
+  color: rgba(255, 255, 255, 0.52);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.project-browser-dots {
+  display: flex;
+  gap: 5px;
+}
+
+.project-browser-dots i {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.32);
+}
+
+.project-screen {
+  overflow: hidden;
+  border-radius: 0 0 23px 23px;
+  background: #090c10;
+}
+
+.project-screen img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: scale(1.002);
+  transition: transform 900ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.project-visual-link:hover .project-screen img {
+  transform: scale(1.025);
+}
+
+.project-orbit {
+  position: absolute;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 0 13px;
+  border: 1px solid rgba(17, 17, 17, 0.16);
+  border-radius: 999px;
+  background: rgba(244, 241, 235, 0.92);
+  box-shadow: 0 14px 34px rgba(17, 17, 17, 0.12);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  color: #111;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.11em;
+}
+
+.project-orbit--live {
+  top: 16%;
+  right: -28px;
+}
+
+.project-orbit--live::before {
+  width: 7px;
+  height: 7px;
+  margin-right: 8px;
+  border-radius: 999px;
+  background: #58d6a3;
+  box-shadow: 0 0 14px rgba(88, 214, 163, 0.55);
+  content: '';
+}
+
+.project-orbit--stack {
+  bottom: 11%;
+  left: -36px;
+}
+
+@keyframes projectReveal {
+  from {
+    opacity: 0;
+    transform: translateY(34px) rotateY(-5deg) scale(0.975);
+  }
+  to {
+    opacity: 1;
+    transform: rotateY(-3deg) rotateX(1deg) scale(1);
+  }
+}
+
+@media (max-width: 980px) {
+  .project-layout--visual {
+    grid-template-columns: 1fr;
+  }
+
+  .project-visual {
+    transform: none;
+  }
+
+  .project-visual-link:hover .project-visual {
+    transform: translateY(-6px);
+  }
+
+  .project-orbit--live {
+    right: 14px;
+  }
+
+  .project-orbit--stack {
+    left: 14px;
+  }
+}
+
+@media (max-width: 720px) {
+  .project-layout {
+    gap: 28px;
+  }
+
+  .project-browser-bar {
+    min-height: 38px;
+    padding: 0 12px;
+    font-size: 9px;
+  }
+
+  .project-orbit {
+    min-height: 30px;
+    padding: 0 10px;
+    font-size: 9px;
+  }
+}
