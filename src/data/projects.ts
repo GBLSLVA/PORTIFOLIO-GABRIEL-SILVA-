@@ -4,6 +4,9 @@ export type Project = {
   technologies: string[]
   github?: string
   demo?: string
+  image?: string
+  imageAlt?: string
+  featured?: boolean
   status?: 'Destaque' | 'Em desenvolvimento' | 'Acadêmico'
 }
 
@@ -14,6 +17,7 @@ export const projects: Project[] = [
       'Painel responsivo de monitoramento financeiro pessoal para acompanhar gastos, dívidas, metas e orçamento.',
     technologies: ['JavaScript', 'Node.js', 'SQLite'],
     github: 'https://github.com/GBLSLVA/zeus-finance',
+    featured: true,
     status: 'Destaque',
   },
   {
