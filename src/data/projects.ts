@@ -24,18 +24,18 @@ export const projects: Project[] = [
     status: 'Destaque',
   },
   {
-    title: 'ZEUS Agent',
-    description:
-      'Estudo de caso de atendimento empresarial com IA para WhatsApp e Instagram, com arquitetura e planejamento de MVP full stack.',
-    technologies: ['IA', 'APIs', 'Full Stack'],
-    github: 'https://github.com/GBLSLVA/ZEUS-AGENT',
-    status: 'Em desenvolvimento',
-  },
-  {
     title: 'Sistema de Gestão e Monitoramento de Horta Urbana',
     description:
-      'Projeto acadêmico focado em gestão, monitoramento e organização de uma horta urbana.',
-    technologies: ['C#', 'Windows Forms', 'SQL Server'],
+      'Projeto acadêmico interdisciplinar de uma aplicação desktop para registrar, organizar e acompanhar informações da gestão de uma horta urbana, passando por requisitos, UML, modelagem de dados, implementação em WinForms e persistência com SQL Server.',
+    technologies: ['C#', '.NET / WinForms', 'SQL Server', 'UML'],
     status: 'Acadêmico',
+  },
+  {
+    title: 'ZEUS Agent',
+    description:
+      'Estudo de arquitetura para atendimento empresarial com IA, com foco em base de conhecimento, histórico, agenda, transferência humana e integrações com WhatsApp e Instagram.',
+    technologies: ['IA', 'Arquitetura', 'APIs', 'Multiempresa'],
+    github: 'https://github.com/GBLSLVA/ZEUS-AGENT',
+    status: 'Em desenvolvimento',
   },
 ]
