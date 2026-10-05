@@ -10,6 +10,7 @@ const links = [
 export function FloatingNav() {
   const [isOpen, setIsOpen] = useState(false)
   const [active, setActive] = useState('#home')
+  const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
     const sections = links
@@ -41,12 +42,24 @@ export function FloatingNav() {
       if (event.key === 'Escape') setIsOpen(false)
     }
 
+    const onScroll = () => {
+      setIsScrolled(window.scrollY > 52)
+    }
+
+    onScroll()
     window.addEventListener('keydown', closeOnEscape)
-    return () => window.removeEventListener('keydown', closeOnEscape)
+    window.addEventListener('scroll', onScroll, { passive: true })
+
+    return () => {
+      window.removeEventListener('keydown', closeOnEscape)
+      window.removeEventListener('scroll', onScroll)
+    }
   }, [])
 
   return (
-    <header className={`floating-nav-shell ${isOpen ? 'is-open' : ''}`}>
+    <header
+      className={`floating-nav-shell ${isOpen ? 'is-open' : ''} ${isScrolled ? 'is-scrolled' : ''}`}
+    >
       <button
         className="floating-nav-toggle"
         type="button"
