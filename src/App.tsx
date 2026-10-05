@@ -17,11 +17,34 @@ function App() {
             <span>01</span>
             <h2>Sobre</h2>
           </div>
-          <p className="about-copy" data-reveal="copy">
-            Sou Gabriel Silva, Desenvolvedor de Software formado em Análise e
-            Desenvolvimento de Sistemas. Gosto de transformar ideias em
-            aplicações organizadas, funcionais e fáceis de usar.
-          </p>
+
+          <div className="about-story">
+            <div className="about-text">
+              <p className="about-copy" data-reveal="copy">
+                Sou Gabriel Silva, Desenvolvedor de Software formado em Análise e
+                Desenvolvimento de Sistemas. Gosto de transformar ideias em
+                aplicações organizadas, funcionais e fáceis de usar.
+              </p>
+              <p className="about-personal" data-reveal="copy">
+                Fora do código, a música também faz parte da minha identidade e
+                do jeito como eu exploro criatividade, ritmo e colaboração.
+              </p>
+            </div>
+
+            <figure className="about-photo" data-reveal="photo">
+              <div className="about-photo-frame">
+                <img
+                  src="/gabriel-bass.webp"
+                  alt="Gabriel Silva tocando baixo em um ensaio musical"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption>
+                <span>Fora do código</span>
+                <strong>Música • criatividade • colaboração</strong>
+              </figcaption>
+            </figure>
+          </div>
         </section>
 
         <Projects />

@@ -45,6 +45,19 @@ export function Hero() {
           <small>scroll</small>
         </div>
       </div>
+
+      <figure className="hero-portrait" aria-label="Retrato de Gabriel Silva">
+        <div className="hero-portrait-frame">
+          <img
+            src="/gabriel-hero.webp"
+            alt="Gabriel Silva usando terno claro e gravata azul"
+          />
+        </div>
+        <figcaption>
+          <span>Software Developer</span>
+          <strong>Gabriel Silva</strong>
+        </figcaption>
+      </figure>
     </section>
   )
 }
