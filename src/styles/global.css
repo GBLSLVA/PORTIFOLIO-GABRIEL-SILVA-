@@ -1059,6 +1059,7 @@ body {
   --tilt-y: -3deg;
   --glow-x: 50%;
   --glow-y: 50%;
+  animation: none;
   transform: perspective(1600px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y));
   transition:
     transform 260ms ease-out,
