@@ -1,19 +1,11 @@
+import { FloatingNav } from './components/FloatingNav'
 import { Hero } from './components/Hero'
 import { Projects } from './components/Projects'
 
 function App() {
   return (
     <>
-      <header className="site-header">
-        <a className="brand" href="#home">
-          GS
-        </a>
-        <nav>
-          <a href="#about">Sobre</a>
-          <a href="#projects">Projetos</a>
-          <a href="#contact">Contato</a>
-        </nav>
-      </header>
+      <FloatingNav />
 
       <main>
         <Hero />
