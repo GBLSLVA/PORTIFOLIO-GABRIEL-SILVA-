@@ -8,6 +8,9 @@ export type Project = {
   imageAlt?: string
   featured?: boolean
   status?: 'Destaque' | 'Em desenvolvimento' | 'Acadêmico'
+  visualKicker?: string
+  visualBadge?: string
+  visualStack?: string
 }
 
 export const projects: Project[] = [
@@ -22,6 +25,9 @@ export const projects: Project[] = [
     imageAlt: 'Tela de login do ZEUS Finance em tema escuro com detalhes verdes',
     featured: true,
     status: 'Destaque',
+    visualKicker: 'zeus-finance • produção',
+    visualBadge: 'LIVE',
+    visualStack: 'FULL STACK',
   },
   {
     title: 'Sistema de Gestão e Monitoramento de Horta Urbana',
@@ -36,6 +42,12 @@ export const projects: Project[] = [
       'Estudo de arquitetura para atendimento empresarial com IA, com foco em base de conhecimento, histórico, agenda, transferência humana e integrações com WhatsApp e Instagram.',
     technologies: ['IA', 'Arquitetura', 'APIs', 'Multiempresa'],
     github: 'https://github.com/GBLSLVA/ZEUS-AGENT',
+    image: '/zeus-agent-preview.svg',
+    imageAlt:
+      'Protótipo conceitual do ZEUS Agent com caixa de entrada omnichannel, conversa assistida por IA e painel de contexto',
     status: 'Em desenvolvimento',
+    visualKicker: 'zeus-agent • protótipo conceitual',
+    visualBadge: 'CONCEITO',
+    visualStack: 'IA + ATENDIMENTO',
   },
 ]
