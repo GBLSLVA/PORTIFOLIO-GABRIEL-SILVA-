@@ -2,7 +2,6 @@ import { FloatingNav } from './components/FloatingNav'
 import { Hero } from './components/Hero'
 import { MotionController } from './components/MotionController'
 import { Projects } from './components/Projects'
-import { Base64Image } from './components/Base64Image'
 import './styles/personal-photo.css'
 
 function App() {
@@ -35,16 +34,16 @@ function App() {
 
             <div className="about-gallery" data-reveal="photo">
               <figure className="about-shot about-shot--music">
-                <Base64Image
-                  parts={['/assets/bass.b64']}
+                <img
+                  src="/assets/bass.webp"
                   alt="Gabriel Silva tocando baixo em um ensaio musical"
                   loading="lazy"
                 />
               </figure>
 
               <figure className="about-shot about-shot--bike">
-                <Base64Image
-                  parts={['/assets/bike.b64']}
+                <img
+                  src="/assets/bike.webp"
                   alt="Gabriel Silva praticando ciclismo"
                   loading="lazy"
                 />

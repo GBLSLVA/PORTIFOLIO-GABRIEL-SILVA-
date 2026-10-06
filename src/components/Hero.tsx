@@ -1,5 +1,4 @@
 import type { CSSProperties } from 'react'
-import { Base64Image } from './Base64Image'
 
 const title =
   'Desenvolvedor de Software criando experiências digitais com código, produto e propósito.'
@@ -49,9 +48,10 @@ export function Hero() {
 
       <figure className="hero-portrait" aria-label="Retrato de Gabriel Silva">
         <div className="hero-portrait-frame">
-          <Base64Image
-            parts={['/assets/hero.b64']}
+          <img
+            src="/assets/hero.webp"
             alt="Gabriel Silva usando terno claro e gravata azul"
+            loading="eager"
           />
         </div>
         <figcaption>
