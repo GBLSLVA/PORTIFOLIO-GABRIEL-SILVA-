@@ -86,14 +86,18 @@ export function Projects() {
                         <i />
                         <i />
                       </span>
-                      <span>zeus-finance • produção</span>
+                      <span>{project.visualKicker ?? 'case study'}</span>
                       <span aria-hidden="true">↗</span>
                     </div>
                     <div className="project-screen">
                       <img src={project.image} alt={project.imageAlt ?? project.title} />
                     </div>
-                    <span className="project-orbit project-orbit--live">LIVE</span>
-                    <span className="project-orbit project-orbit--stack">FULL STACK</span>
+                    <span className="project-orbit project-orbit--live">
+                      {project.visualBadge ?? 'PREVIEW'}
+                    </span>
+                    <span className="project-orbit project-orbit--stack">
+                      {project.visualStack ?? 'SOFTWARE'}
+                    </span>
                   </div>
                 </a>
               )}
