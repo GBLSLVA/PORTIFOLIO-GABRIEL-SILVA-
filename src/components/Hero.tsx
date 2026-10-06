@@ -50,7 +50,7 @@ export function Hero() {
         <div className="hero-portrait-frame">
           <img
             src="/assets/hero.webp"
-            alt="Gabriel Silva usando terno claro e gravata azul"
+            alt="Gabriel Silva sorrindo em um retrato casual"
             loading="eager"
           />
         </div>
