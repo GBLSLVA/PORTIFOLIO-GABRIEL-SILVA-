@@ -36,7 +36,7 @@ function App() {
             <div className="about-gallery" data-reveal="photo">
               <figure className="about-shot about-shot--music">
                 <Base64Image
-                  parts={['/assets/bass-01.txt', '/assets/bass-02.txt', '/assets/bass-03.txt', '/assets/bass-04.txt', '/assets/bass-05.txt']}
+                  parts={['/assets/bass.b64']}
                   alt="Gabriel Silva tocando baixo em um ensaio musical"
                   loading="lazy"
                 />
@@ -44,7 +44,7 @@ function App() {
 
               <figure className="about-shot about-shot--bike">
                 <Base64Image
-                  parts={['/assets/bike-01.txt', '/assets/bike-02.txt', '/assets/bike-03.txt', '/assets/bike-04.txt', '/assets/bike-05.txt', '/assets/bike-06.txt']}
+                  parts={['/assets/bike.b64']}
                   alt="Gabriel Silva praticando ciclismo"
                   loading="lazy"
                 />
