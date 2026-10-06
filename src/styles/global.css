@@ -1181,7 +1181,7 @@ footer.is-visible {
   top: clamp(104px, 14vh, 154px);
   right: clamp(0px, 1.6vw, 24px);
   z-index: 1;
-  width: clamp(280px, 30vw, 455px);
+  width: clamp(280px, 28vw, 430px);
   margin: 0;
   opacity: 0;
   transform: translate3d(42px, calc(var(--hero-shift) * 0.18), 0) rotate(1.4deg);
@@ -1190,8 +1190,8 @@ footer.is-visible {
 
 .hero-portrait-frame {
   position: relative;
-  height: min(66vh, 620px);
-  min-height: 470px;
+  height: min(61vh, 570px);
+  min-height: 450px;
   overflow: hidden;
   border: 1px solid rgba(17, 17, 17, 0.14);
   border-radius: 28px;
@@ -1216,13 +1216,14 @@ footer.is-visible {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 50% 39%;
-  transform: scale(1.22);
+  object-position: 50% 42%;
+  transform: scale(1);
+  image-rendering: auto;
   transition: transform 900ms var(--ease-spring-2);
 }
 
 .hero-portrait:hover img {
-  transform: scale(1.26);
+  transform: scale(1.035);
 }
 
 .hero-portrait figcaption {
@@ -1361,11 +1362,11 @@ footer.is-visible {
   }
 
   .hero-portrait {
-    width: clamp(250px, 31vw, 360px);
+    width: clamp(250px, 30vw, 350px);
   }
 
   .hero-portrait-frame {
-    height: min(58vh, 540px);
+    height: min(56vh, 510px);
   }
 
   .about-story {
@@ -1387,13 +1388,13 @@ footer.is-visible {
     position: relative;
     top: auto;
     right: auto;
-    width: min(100%, 560px);
+    width: min(100%, 480px);
     margin: 58px 0 8px auto;
     transform: none;
   }
 
   .hero-portrait-frame {
-    height: clamp(480px, 105vw, 680px);
+    height: clamp(440px, 105vw, 600px);
   }
 
   .about-story {
@@ -1414,12 +1415,12 @@ footer.is-visible {
 
   .hero-portrait-frame {
     min-height: 0;
-    height: min(128vw, 610px);
+    height: min(118vw, 590px);
     border-radius: 22px;
   }
 
   .hero-portrait img {
-    transform: scale(1.18);
+    transform: scale(1);
   }
 
   .about-story {
