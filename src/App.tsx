@@ -84,6 +84,11 @@ function App() {
                 <strong>Conectar ↗</strong>
               </a>
 
+              <a href="mailto:Gabrielsilva_153@hotmail.com">
+                <span>E-mail</span>
+                <strong>Gabrielsilva_153@hotmail.com ↗</strong>
+              </a>
+
               <a href="https://github.com/GBLSLVA" target="_blank" rel="noreferrer">
                 <span>GitHub</span>
                 <strong>GBLSLVA ↗</strong>
