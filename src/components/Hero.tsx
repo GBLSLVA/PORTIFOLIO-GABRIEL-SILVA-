@@ -49,7 +49,7 @@ export function Hero() {
       <figure className="hero-portrait" aria-label="Retrato de Gabriel Silva">
         <div className="hero-portrait-frame">
           <img
-            src="/assets/hero.webp"
+            src="/assets/hero.jpeg"
             alt="Gabriel Silva sorrindo em um retrato casual"
             loading="eager"
           />
