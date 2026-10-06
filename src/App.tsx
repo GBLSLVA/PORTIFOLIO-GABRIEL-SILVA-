@@ -64,11 +64,31 @@ function App() {
             <span>03</span>
             <h2>Contato</h2>
           </div>
-          <p data-reveal="copy">Vamos construir algo interessante.</p>
-          <div className="contact-links" data-reveal="copy">
-            <a href="https://github.com/GBLSLVA" target="_blank" rel="noreferrer">
-              GitHub ↗
-            </a>
+
+          <div className="contact-layout">
+            <div className="contact-intro" data-reveal="copy">
+              <p>Vamos construir algo interessante.</p>
+              <span>
+                Aberto a oportunidades, projetos e boas conversas sobre desenvolvimento
+                de software.
+              </span>
+            </div>
+
+            <div className="contact-links" data-reveal="copy">
+              <a
+                href="https://www.linkedin.com/in/gabriel-silva-13ab4a116/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>LinkedIn</span>
+                <strong>Conectar ↗</strong>
+              </a>
+
+              <a href="https://github.com/GBLSLVA" target="_blank" rel="noreferrer">
+                <span>GitHub</span>
+                <strong>GBLSLVA ↗</strong>
+              </a>
+            </div>
           </div>
         </section>
       </main>
