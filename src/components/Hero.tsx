@@ -3,7 +3,13 @@ import type { CSSProperties } from 'react'
 const title =
   'Desenvolvedor de Software criando experiências digitais com código, produto e propósito.'
 
-const titleWords = title.split(' ')
+const titleLines = [
+  { words: ['Desenvolvedor', 'de'], offset: 0 },
+  { words: ['Software', 'criando'], offset: 2 },
+  { words: ['experiências', 'digitais'], offset: 4 },
+  { words: ['com', 'código,', 'produto'], offset: 6 },
+  { words: ['e', 'propósito.'], offset: 9 },
+]
 
 export function Hero() {
   return (
@@ -17,16 +23,18 @@ export function Hero() {
       <div className="hero-content">
         <p className="eyebrow hero-kicker">Gabriel Silva</p>
 
-        <h1 aria-label={title}>
-          {titleWords.map((word, index) => (
-            <span
-              className="hero-word"
-              key={`${word}-${index}`}
-              style={{ '--word-index': index } as CSSProperties}
-              aria-hidden="true"
-            >
-              {word}
-              {index < titleWords.length - 1 ? ' ' : ''}
+        <h1 className="hero-title" aria-label={title}>
+          {titleLines.map((line, lineIndex) => (
+            <span className="hero-title-line" key={`hero-line-${lineIndex}`} aria-hidden="true">
+              {line.words.map((word, wordIndex) => (
+                <span
+                  className="hero-word"
+                  key={`${word}-${lineIndex}-${wordIndex}`}
+                  style={{ '--word-index': line.offset + wordIndex } as CSSProperties}
+                >
+                  {word}
+                </span>
+              ))}
             </span>
           ))}
         </h1>
