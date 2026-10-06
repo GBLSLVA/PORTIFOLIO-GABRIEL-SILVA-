@@ -2,6 +2,8 @@ import { FloatingNav } from './components/FloatingNav'
 import { Hero } from './components/Hero'
 import { MotionController } from './components/MotionController'
 import { Projects } from './components/Projects'
+import { Base64Image } from './components/Base64Image'
+import './styles/personal-photo.css'
 
 function App() {
   return (
@@ -26,24 +28,33 @@ function App() {
                 aplicações organizadas, funcionais e fáceis de usar.
               </p>
               <p className="about-personal" data-reveal="copy">
-                Fora do código, a música também faz parte da minha identidade e
-                do jeito como eu exploro criatividade, ritmo e colaboração.
+                Fora do código, a música e o ciclismo também fazem parte de quem eu sou:
+                criatividade, ritmo, disciplina e movimento que levo para os projetos.
               </p>
             </div>
 
-            <figure className="about-photo" data-reveal="photo">
-              <div className="about-photo-frame">
-                <img
-                  src="/gabriel-bass.webp"
+            <div className="about-gallery" data-reveal="photo">
+              <figure className="about-shot about-shot--music">
+                <Base64Image
+                  parts={['/assets/bass-01.txt', '/assets/bass-02.txt', '/assets/bass-03.txt', '/assets/bass-04.txt', '/assets/bass-05.txt']}
                   alt="Gabriel Silva tocando baixo em um ensaio musical"
                   loading="lazy"
                 />
-              </div>
-              <figcaption>
+              </figure>
+
+              <figure className="about-shot about-shot--bike">
+                <Base64Image
+                  parts={['/assets/bike-01.txt', '/assets/bike-02.txt', '/assets/bike-03.txt', '/assets/bike-04.txt', '/assets/bike-05.txt', '/assets/bike-06.txt']}
+                  alt="Gabriel Silva praticando ciclismo"
+                  loading="lazy"
+                />
+              </figure>
+
+              <div className="about-gallery-caption">
                 <span>Fora do código</span>
-                <strong>Música • criatividade • colaboração</strong>
-              </figcaption>
-            </figure>
+                <strong>Música • ciclismo • criatividade • disciplina</strong>
+              </div>
+            </div>
           </div>
         </section>
 
