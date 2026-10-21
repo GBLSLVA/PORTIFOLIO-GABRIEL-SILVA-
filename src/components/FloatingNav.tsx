@@ -74,9 +74,9 @@ export function FloatingNav() {
       </button>
 
       <nav className="floating-nav" aria-label="Navegação principal">
-        <div className="nav-mark" aria-hidden="true">
+        <a className="nav-mark" href="#home" aria-label="Gabriel Silva — voltar ao início">
           GS
-        </div>
+        </a>
 
         <ul id="floating-nav-menu">
           {links.map((link) => (
@@ -84,7 +84,7 @@ export function FloatingNav() {
               <a
                 href={link.href}
                 className={active === link.href ? 'active' : ''}
-                aria-current={active === link.href ? 'page' : undefined}
+                aria-current={active === link.href ? 'location' : undefined}
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
