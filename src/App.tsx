@@ -7,6 +7,7 @@ import './styles/personal-photo.css'
 function App() {
   return (
     <>
+      <a className="skip-link" href="#home">Pular para o conteúdo</a>
       <MotionController />
       <FloatingNav />
 
@@ -30,6 +31,13 @@ function App() {
                 Fora do código, a música e o ciclismo também fazem parte de quem eu sou:
                 criatividade, ritmo, disciplina e movimento que levo para os projetos.
               </p>
+              <div className="about-training" data-reveal="copy">
+                <span className="about-training-label">Formação contínua</span>
+                <div className="about-training-info">
+                  <p>Bootcamp de Cibersegurança — Santander + DIO</p>
+                  <span className="about-training-status">Em andamento</span>
+                </div>
+              </div>
             </div>
 
             <div className="about-gallery" data-reveal="photo">
