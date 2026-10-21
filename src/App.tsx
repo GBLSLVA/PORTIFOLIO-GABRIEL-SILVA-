@@ -7,11 +7,11 @@ import './styles/personal-photo.css'
 function App() {
   return (
     <>
-      <a className="skip-link" href="#home">Pular para o conteúdo</a>
+      <a className="skip-link" href="#main-content">Pular para o conteúdo</a>
       <MotionController />
       <FloatingNav />
 
-      <main>
+      <main id="main-content" tabIndex={-1}>
         <Hero />
 
         <section className="section about" id="about">
