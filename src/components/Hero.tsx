@@ -26,19 +26,19 @@ export function Hero() {
         <h1 className="hero-title">
           <span className="visually-hidden">{title}</span>
           <span className="hero-title-animation" aria-hidden="true">
-          {titleLines.map((line, lineIndex) => (
-            <span className="hero-title-line" key={`hero-line-${lineIndex}`}>
-              {line.words.map((word, wordIndex) => (
-                <span
-                  className="hero-word"
-                  key={`${word}-${lineIndex}-${wordIndex}`}
-                  style={{ '--word-index': line.offset + wordIndex } as CSSProperties}
-                >
-                  {word}
-                </span>
-              ))}
-            </span>
-          ))}
+            {titleLines.map((line, lineIndex) => (
+              <span className="hero-title-line" key={`hero-line-${lineIndex}`}>
+                {line.words.map((word, wordIndex) => (
+                  <span
+                    className="hero-word"
+                    key={`${word}-${lineIndex}-${wordIndex}`}
+                    style={{ '--word-index': line.offset + wordIndex } as CSSProperties}
+                  >
+                    {word}
+                  </span>
+                ))}
+              </span>
+            ))}
           </span>
         </h1>
 
