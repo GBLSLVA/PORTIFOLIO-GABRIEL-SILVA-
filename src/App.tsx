@@ -1,16 +1,21 @@
 import { FloatingNav } from './components/FloatingNav'
 import { Hero } from './components/Hero'
 import { MotionController } from './components/MotionController'
+import { Profile } from './components/Profile'
 import { Projects } from './components/Projects'
 import './styles/personal-photo.css'
 
 function App() {
   return (
     <>
+      <a className="skip-link" href="#main-content">
+        Pular para o conteúdo
+      </a>
+
       <MotionController />
       <FloatingNav />
 
-      <main>
+      <main id="main-content">
         <Hero />
 
         <section className="section about" id="about">
@@ -23,12 +28,13 @@ function App() {
             <div className="about-text">
               <p className="about-copy" data-reveal="copy">
                 Sou Gabriel Silva, Desenvolvedor de Software formado em Análise e
-                Desenvolvimento de Sistemas. Gosto de transformar ideias em
-                aplicações organizadas, funcionais e fáceis de usar.
+                Desenvolvimento de Sistemas, com foco em aplicações full stack e
+                back-end.
               </p>
               <p className="about-personal" data-reveal="copy">
-                Fora do código, a música e o ciclismo também fazem parte de quem eu sou:
-                criatividade, ritmo, disciplina e movimento que levo para os projetos.
+                Gosto de transformar regras de negócio em soluções claras e confiáveis.
+                Fora do código, música e ciclismo fazem parte de quem eu sou — criatividade,
+                ritmo, disciplina e movimento que também levo para os projetos.
               </p>
             </div>
 
@@ -57,11 +63,12 @@ function App() {
           </div>
         </section>
 
+        <Profile />
         <Projects />
 
         <section className="section contact" id="contact">
           <div className="section-heading" data-reveal="heading">
-            <span>03</span>
+            <span>04</span>
             <h2>Contato</h2>
           </div>
 
@@ -69,8 +76,8 @@ function App() {
             <div className="contact-intro" data-reveal="copy">
               <p>Vamos construir algo interessante.</p>
               <span>
-                Aberto a oportunidades, projetos e boas conversas sobre desenvolvimento
-                de software.
+                Busco minha primeira oportunidade em desenvolvimento de software e estou
+                aberto a projetos, desafios e boas conversas sobre tecnologia.
               </span>
             </div>
 
@@ -84,14 +91,19 @@ function App() {
                 <strong>Conectar ↗</strong>
               </a>
 
-              <a href="mailto:Gabrielsilva_153@hotmail.com">
+              <a href="mailto:oi.gabrielsilvadosantos@gmail.com">
                 <span>E-mail</span>
-                <strong>Gabrielsilva_153@hotmail.com ↗</strong>
+                <strong>oi.gabrielsilvadosantos@gmail.com ↗</strong>
               </a>
 
               <a href="https://github.com/GBLSLVA" target="_blank" rel="noreferrer">
                 <span>GitHub</span>
                 <strong>GBLSLVA ↗</strong>
+              </a>
+
+              <a href="/curriculo.html" target="_blank" rel="noreferrer">
+                <span>Currículo</span>
+                <strong>Abrir versão atual ↗</strong>
               </a>
             </div>
           </div>
@@ -99,8 +111,8 @@ function App() {
       </main>
 
       <footer data-reveal="footer">
-        <span>Meu Portfólio</span>
-        <span>Gabriel Silva © 2026</span>
+        <span>Gabriel Silva • Software Developer</span>
+        <span>© 2026</span>
       </footer>
     </>
   )

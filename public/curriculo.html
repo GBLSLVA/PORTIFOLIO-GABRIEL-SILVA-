@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Currículo | Gabriel Silva dos Santos</title>
+  <style>
+    :root{font-family:Inter,Arial,sans-serif;color:#111;background:#efede8}
+    *{box-sizing:border-box}
+    body{margin:0;padding:40px 18px}
+    .sheet{width:min(980px,100%);margin:auto;background:#fff;padding:54px;box-shadow:0 24px 80px rgba(0,0,0,.1)}
+    header{display:grid;grid-template-columns:1fr auto;gap:30px;border-bottom:2px solid #111;padding-bottom:28px}
+    h1{margin:0;font-size:42px;letter-spacing:-.04em}
+    h2{margin:34px 0 14px;font-size:18px;text-transform:uppercase;letter-spacing:.08em}
+    h3{margin:0 0 6px;font-size:18px}
+    p{line-height:1.55}
+    .subtitle{margin:8px 0 0;color:#555}
+    .contact{text-align:right;font-size:13px;line-height:1.8}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px 36px}
+    .item{padding:16px 0;border-top:1px solid #ddd}
+    .meta{color:#666;font-size:13px}
+    .tags{display:flex;flex-wrap:wrap;gap:7px}
+    .tags span{border:1px solid #ccc;border-radius:999px;padding:6px 9px;font-size:12px}
+    .actions{width:min(980px,100%);margin:0 auto 16px;display:flex;justify-content:flex-end}
+    button{border:0;border-radius:999px;background:#111;color:#fff;padding:12px 18px;cursor:pointer}
+    @media(max-width:700px){.sheet{padding:28px}.grid,header{grid-template-columns:1fr}.contact{text-align:left}}
+    @media print{body{background:#fff;padding:0}.actions{display:none}.sheet{box-shadow:none;width:100%;padding:24px}}
+  </style>
+</head>
+<body>
+  <div class="actions"><button onclick="window.print()">Imprimir / salvar em PDF</button></div>
+  <main class="sheet">
+    <header>
+      <div>
+        <h1>Gabriel Silva dos Santos</h1>
+        <p class="subtitle">Desenvolvedor de Software Júnior • Back-end • Full Stack</p>
+      </div>
+      <div class="contact">
+        Praia Grande, SP<br/>
+        oi.gabrielsilvadosantos@gmail.com<br/>
+        github.com/GBLSLVA<br/>
+        linkedin.com/in/gabriel-silva-13ab4a116
+      </div>
+    </header>
+
+    <h2>Perfil profissional</h2>
+    <p>
+      Desenvolvedor de Software formado em Análise e Desenvolvimento de Sistemas pela UNIP,
+      com experiência prática em projetos full stack e foco em back-end. Trabalha com Node.js,
+      JavaScript/TypeScript, React, SQL, autenticação, persistência, testes de integração, C#,
+      .NET e modelagem relacional. Atualmente amplia a formação com um bootcamp de
+      Cibersegurança do Santander em parceria com a DIO.
+    </p>
+
+    <h2>Competências técnicas</h2>
+    <div class="tags">
+      <span>Node.js</span><span>TypeScript</span><span>JavaScript</span><span>React</span>
+      <span>C#</span><span>.NET / WinForms</span><span>ASP.NET</span><span>SQL</span>
+      <span>SQLite</span><span>SQL Server</span><span>Git/GitHub</span><span>POO</span>
+      <span>UML</span><span>Testes de integração</span><span>Cibersegurança</span>
+    </div>
+
+    <h2>Projetos em destaque</h2>
+    <div class="item">
+      <h3>ZEUS Finance</h3>
+      <div class="meta">React • TypeScript • Node.js • SQLite</div>
+      <p>Aplicação full stack com API, autenticação, sessões, persistência e testes de integração para gastos, dívidas e metas.</p>
+    </div>
+    <div class="item">
+      <h3>Sistema de Gestão e Monitoramento de Horta Urbana</h3>
+      <div class="meta">C# • Windows Forms • SQL Server • POO • UML</div>
+      <p>Projeto acadêmico envolvendo requisitos, modelagem, implementação desktop, persistência, testes e documentação.</p>
+    </div>
+    <div class="item">
+      <h3>ZEUS Agent</h3>
+      <div class="meta">Arquitetura • IA • Multiempresa • APIs</div>
+      <p>Estudo de arquitetura para atendimento empresarial com base de conhecimento, agenda, histórico, permissões e transferência humana.</p>
+    </div>
+
+    <h2>Experiência profissional</h2>
+    <div class="grid">
+      <div class="item">
+        <h3>Atendente de Loja • Drogaria São Paulo</h3>
+        <div class="meta">ago. 2024 — atual</div>
+        <p>Atendimento, operação de loja, estoque e resolução de demandas operacionais.</p>
+      </div>
+      <div class="item">
+        <h3>Instalador TA • Danlex Serviços</h3>
+        <div class="meta">jun. 2023 — dez. 2023</div>
+        <p>Instalação e suporte técnico em redes GPON/HFC, diagnóstico de falhas e ordens de serviço.</p>
+      </div>
+    </div>
+
+    <h2>Formação</h2>
+    <div class="grid">
+      <div class="item">
+        <h3>Análise e Desenvolvimento de Sistemas • UNIP</h3>
+        <div class="meta">2023 — 2025</div>
+      </div>
+      <div class="item">
+        <h3>Bootcamp de Cibersegurança • Santander + DIO</h3>
+        <div class="meta">Em andamento</div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

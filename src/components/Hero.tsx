@@ -21,31 +21,40 @@ export function Hero() {
       </div>
 
       <div className="hero-content">
-        <p className="eyebrow hero-kicker">Gabriel Silva</p>
+        <p className="eyebrow hero-kicker">Gabriel Silva • Software Developer</p>
 
-        <h1 className="hero-title" aria-label={title}>
-          {titleLines.map((line, lineIndex) => (
-            <span className="hero-title-line" key={`hero-line-${lineIndex}`} aria-hidden="true">
-              {line.words.map((word, wordIndex) => (
-                <span
-                  className="hero-word"
-                  key={`${word}-${lineIndex}-${wordIndex}`}
-                  style={{ '--word-index': line.offset + wordIndex } as CSSProperties}
-                >
-                  {word}
-                </span>
-              ))}
-            </span>
-          ))}
+        <h1 className="hero-title">
+          <span className="sr-only">{title}</span>
+          <span className="hero-title-visual" aria-hidden="true">
+            {titleLines.map((line, lineIndex) => (
+              <span className="hero-title-line" key={`hero-line-${lineIndex}`}>
+                {line.words.map((word, wordIndex) => (
+                  <span
+                    className="hero-word"
+                    key={`${word}-${lineIndex}-${wordIndex}`}
+                    style={{ '--word-index': line.offset + wordIndex } as CSSProperties}
+                  >
+                    {word}
+                  </span>
+                ))}
+              </span>
+            ))}
+          </span>
         </h1>
 
         <div className="hero-footer">
           <p>
-            React, JavaScript, Node.js, C#, SQL e projetos que continuam evoluindo.
+            React, TypeScript, Node.js, C#, SQL e uma formação que agora também avança
+            por cibersegurança.
           </p>
-          <a href="#projects" className="text-link">
-            Ver projetos <span aria-hidden="true">↘</span>
-          </a>
+          <div className="hero-actions">
+            <a href="#projects" className="text-link">
+              Ver projetos <span aria-hidden="true">↘</span>
+            </a>
+            <a href="/curriculo.html" className="text-link" target="_blank" rel="noreferrer">
+              Ver currículo <span aria-hidden="true">↗</span>
+            </a>
+          </div>
         </div>
 
         <div className="hero-scroll-cue" aria-hidden="true">
@@ -60,6 +69,7 @@ export function Hero() {
             src="/assets/hero.jpeg"
             alt="Gabriel Silva sorrindo em um retrato casual"
             loading="eager"
+            fetchPriority="high"
           />
         </div>
         <figcaption>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101711"/>
+      <stop offset="1" stop-color="#172019"/>
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="900" rx="28" fill="url(#bg)"/>
+  <g font-family="Inter, Arial, sans-serif">
+    <text x="76" y="88" fill="#9BE37D" font-size="15" font-weight="700" letter-spacing="2.4">CASE TÉCNICO • HORTA URBANA</text>
+    <text x="76" y="170" fill="#F4F7F2" font-size="58" font-weight="700">Do requisito à aplicação desktop.</text>
+    <text x="76" y="220" fill="#A8B3A6" font-size="20">C# • Windows Forms • SQL Server • POO • UML</text>
+
+    <g transform="translate(76 310)">
+      <rect width="280" height="170" rx="22" fill="#1D281F" stroke="#334838"/>
+      <text x="26" y="44" fill="#9BE37D" font-size="12" font-weight="700" letter-spacing="1.6">01 • REQUISITOS</text>
+      <text x="26" y="86" fill="#F4F7F2" font-size="24" font-weight="600">Entender o fluxo</text>
+      <text x="26" y="120" fill="#A8B3A6" font-size="15">Casos de uso, regras</text>
+      <text x="26" y="144" fill="#A8B3A6" font-size="15">e necessidades da gestão.</text>
+
+      <rect x="330" width="280" height="170" rx="22" fill="#1D281F" stroke="#334838"/>
+      <text x="356" y="44" fill="#9BE37D" font-size="12" font-weight="700" letter-spacing="1.6">02 • MODELAGEM</text>
+      <text x="356" y="86" fill="#F4F7F2" font-size="24" font-weight="600">Estruturar os dados</text>
+      <text x="356" y="120" fill="#A8B3A6" font-size="15">UML, entidades e</text>
+      <text x="356" y="144" fill="#A8B3A6" font-size="15">relacionamentos no SQL Server.</text>
+
+      <rect x="660" width="280" height="170" rx="22" fill="#1D281F" stroke="#334838"/>
+      <text x="686" y="44" fill="#9BE37D" font-size="12" font-weight="700" letter-spacing="1.6">03 • IMPLEMENTAÇÃO</text>
+      <text x="686" y="86" fill="#F4F7F2" font-size="24" font-weight="600">Construir em C#</text>
+      <text x="686" y="120" fill="#A8B3A6" font-size="15">Telas, POO e regras</text>
+      <text x="686" y="144" fill="#A8B3A6" font-size="15">de negócio com WinForms.</text>
+
+      <rect x="990" width="280" height="170" rx="22" fill="#1D281F" stroke="#334838"/>
+      <text x="1016" y="44" fill="#9BE37D" font-size="12" font-weight="700" letter-spacing="1.6">04 • VALIDAÇÃO</text>
+      <text x="1016" y="86" fill="#F4F7F2" font-size="24" font-weight="600">Testar e documentar</text>
+      <text x="1016" y="120" fill="#A8B3A6" font-size="15">Persistência, fluxos,</text>
+      <text x="1016" y="144" fill="#A8B3A6" font-size="15">testes e documentação.</text>
+    </g>
+
+    <path d="M215 555H1225" stroke="#334838" stroke-width="2" stroke-dasharray="8 10"/>
+    <circle cx="215" cy="555" r="8" fill="#9BE37D"/>
+    <circle cx="545" cy="555" r="8" fill="#9BE37D"/>
+    <circle cx="875" cy="555" r="8" fill="#9BE37D"/>
+    <circle cx="1205" cy="555" r="8" fill="#9BE37D"/>
+
+    <rect x="76" y="650" width="1288" height="150" rx="24" fill="#0C110D" stroke="#2C3C30"/>
+    <text x="110" y="700" fill="#F4F7F2" font-size="18" font-weight="600">O que este projeto demonstra</text>
+    <text x="110" y="742" fill="#A8B3A6" font-size="17">Capacidade de participar de uma entrega desde a análise do problema até modelagem, implementação, banco de dados, testes e documentação.</text>
+    <text x="110" y="775" fill="#718173" font-size="12" letter-spacing="1.4">VISUAL DE CASE TÉCNICO • NÃO REPRESENTA UMA CAPTURA DA INTERFACE</text>
+  </g>
+</svg>

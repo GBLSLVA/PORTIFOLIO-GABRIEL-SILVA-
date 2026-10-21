@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 const links = [
   { href: '#home', label: 'Início' },
   { href: '#about', label: 'Sobre' },
+  { href: '#profile', label: 'Trajetória' },
   { href: '#projects', label: 'Projetos' },
   { href: '#contact', label: 'Contato' },
 ]
@@ -74,9 +75,9 @@ export function FloatingNav() {
       </button>
 
       <nav className="floating-nav" aria-label="Navegação principal">
-        <div className="nav-mark" aria-hidden="true">
+        <a className="nav-mark" href="#home" aria-label="Voltar ao início">
           GS
-        </div>
+        </a>
 
         <ul id="floating-nav-menu">
           {links.map((link) => (
@@ -84,7 +85,7 @@ export function FloatingNav() {
               <a
                 href={link.href}
                 className={active === link.href ? 'active' : ''}
-                aria-current={active === link.href ? 'page' : undefined}
+                aria-current={active === link.href ? 'location' : undefined}
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
@@ -93,7 +94,7 @@ export function FloatingNav() {
           ))}
         </ul>
 
-        <span className="nav-status" aria-hidden="true">
+        <span className="nav-status" aria-hidden="true" title="Portfólio online">
           <i />
         </span>
       </nav>
