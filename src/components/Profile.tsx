@@ -1,3 +1,5 @@
+import type { CSSProperties } from 'react'
+
 const skillGroups = [
   {
     label: 'Front-end',
@@ -79,7 +81,7 @@ export function Profile() {
               className={`journey-card ${item.featured ? 'journey-card--featured' : ''}`}
               key={`${item.title}-${item.period}`}
               data-reveal="copy"
-              style={{ '--reveal-delay': `${index * 70}ms` } as React.CSSProperties}
+              style={{ '--reveal-delay': `${index * 70}ms` } as CSSProperties}
             >
               <div className="journey-card-top">
                 <span>{item.eyebrow}</span>
