@@ -90,7 +90,12 @@ export function Projects() {
                       <span aria-hidden="true">↗</span>
                     </div>
                     <div className="project-screen">
-                      <img src={project.image} alt={project.imageAlt ?? project.title} />
+                      <img
+                        src={project.image}
+                        alt={project.imageAlt ?? project.title}
+                        loading="lazy"
+                        decoding="async"
+                      />
                     </div>
                     <span className="project-orbit project-orbit--live">
                       {project.visualBadge ?? 'PREVIEW'}
