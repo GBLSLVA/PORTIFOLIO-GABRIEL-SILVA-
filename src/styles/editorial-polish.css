@@ -13,6 +13,18 @@
 
 .hero-title-animation { display: block; }
 
+/* Preserve the original GS square after making it a real home link. */
+.floating-nav a.nav-mark {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  place-items: center;
+  color: #fff;
+  text-decoration: none;
+}
+
+
 .skip-link {
   position: fixed;
   top: 12px;
@@ -73,6 +85,8 @@ button:focus-visible {
 }
 
 @media (max-width: 720px) {
+  .floating-nav a.nav-mark { display: none; }
+
   /* Closed menu should not remain keyboard-focusable. */
   .floating-nav {
     visibility: hidden;
