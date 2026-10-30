@@ -27,7 +27,9 @@ npm audit --audit-level=high
 npm run preview
 ```
 
-O teste automatizado verifica abertura, fechamento, Escape, foco e comportamento responsivo da navegação mobile.\n\nO build executa a verificação TypeScript e gera os arquivos estáticos em `dist/`. O `package-lock.json` versionado garante que `npm ci` instale a árvore de dependências registrada. O GitHub Actions executa instalação reproduzível, auditoria de dependências, testes de navegação e build a cada pull request para `main`.
+O teste automatizado verifica abertura, fechamento, Escape, foco e comportamento responsivo da navegação mobile.
+
+O build executa a verificação TypeScript e gera os arquivos estáticos em `dist/`. O `package-lock.json` versionado garante que `npm ci` instale a árvore de dependências registrada. O GitHub Actions executa instalação reproduzível, auditoria de dependências, testes de navegação e build a cada pull request para `main`.
 
 ## Organização
 
