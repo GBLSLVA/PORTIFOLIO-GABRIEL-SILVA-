@@ -336,19 +336,26 @@ footer {
     min-height: 0;
     padding: 10px;
     border-radius: 16px;
+    visibility: hidden;
     opacity: 0;
     pointer-events: none;
     transform: translateY(-8px) scale(0.98);
     transform-origin: top right;
     transition:
       opacity 240ms ease,
-      transform 300ms cubic-bezier(0.2, 0.8, 0.2, 1);
+      transform 300ms cubic-bezier(0.2, 0.8, 0.2, 1),
+      visibility 0s linear 300ms;
   }
 
   .is-open .floating-nav {
+    visibility: visible;
     opacity: 1;
     pointer-events: auto;
     transform: translateY(0) scale(1);
+    transition:
+      opacity 240ms ease,
+      transform 300ms cubic-bezier(0.2, 0.8, 0.2, 1),
+      visibility 0s;
   }
 
   .nav-mark,
@@ -668,14 +675,17 @@ body {
   transition: width 80ms linear;
 }
 
-.floating-nav {
-  animation: navEnter 720ms var(--ease-spring-2) 120ms both;
-  transition:
-    min-height 380ms var(--ease-spring-2),
-    padding 380ms var(--ease-spring-2),
-    border-radius 380ms var(--ease-spring-2),
-    box-shadow 380ms ease,
-    background 380ms ease;
+/* The desktop entrance animation must not override mobile open/closed states. */
+@media (min-width: 721px) {
+  .floating-nav {
+    animation: navEnter 720ms var(--ease-spring-2) 120ms both;
+    transition:
+      min-height 380ms var(--ease-spring-2),
+      padding 380ms var(--ease-spring-2),
+      border-radius 380ms var(--ease-spring-2),
+      box-shadow 380ms ease,
+      background 380ms ease;
+  }
 }
 
 .is-scrolled .floating-nav {
@@ -1158,13 +1168,18 @@ footer.is-visible {
   .hero-footer,
   .hero-ambient-card,
   .hero-scroll-cue,
-  .floating-nav,
   .nav-status i,
   .project-orbit {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
     translate: none !important;
+  }
+
+  /* Disabling motion must never force the mobile menu open. */
+  .floating-nav {
+    animation: none !important;
+    transition: none !important;
   }
 
   [data-reveal] {
