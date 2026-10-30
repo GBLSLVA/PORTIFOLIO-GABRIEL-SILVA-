@@ -23,5 +23,7 @@ jobs:
         run: npm ci --no-fund
       - name: Dependency security audit
         run: npm audit --audit-level=high
+      - name: Component behavior tests
+        run: npm test
       - name: TypeScript and Vite build
         run: npm run build
