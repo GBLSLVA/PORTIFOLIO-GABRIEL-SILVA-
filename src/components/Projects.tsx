@@ -90,7 +90,12 @@ export function Projects() {
                       <span aria-hidden="true">↗</span>
                     </div>
                     <div className="project-screen">
-                      <img src={project.image} alt={project.imageAlt ?? project.title} />
+                      <img
+                        src={project.image}
+                        alt={project.imageAlt ?? project.title}
+                        loading="lazy"
+                        decoding="async"
+                      />
                     </div>
                     <span className="project-orbit project-orbit--live">
                       {project.visualBadge ?? 'PREVIEW'}
@@ -102,6 +107,23 @@ export function Projects() {
                 </a>
               )}
             </div>
+
+            {project.caseStudy && (
+              <details className="project-case-study">
+                <summary>
+                  <span>Explorar o estudo de caso</span>
+                  <span className="project-case-study-toggle" aria-hidden="true">+</span>
+                </summary>
+                <div className="project-case-study-content">
+                  {project.caseStudy.map((part) => (
+                    <section className="project-case-study-part" key={part.label}>
+                      <h4>{part.label}</h4>
+                      <p>{part.text}</p>
+                    </section>
+                  ))}
+                </div>
+              </details>
+            )}
           </article>
         ))}
       </div>

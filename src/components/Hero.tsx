@@ -23,20 +23,23 @@ export function Hero() {
       <div className="hero-content">
         <p className="eyebrow hero-kicker">Gabriel Silva</p>
 
-        <h1 className="hero-title" aria-label={title}>
-          {titleLines.map((line, lineIndex) => (
-            <span className="hero-title-line" key={`hero-line-${lineIndex}`} aria-hidden="true">
-              {line.words.map((word, wordIndex) => (
-                <span
-                  className="hero-word"
-                  key={`${word}-${lineIndex}-${wordIndex}`}
-                  style={{ '--word-index': line.offset + wordIndex } as CSSProperties}
-                >
-                  {word}
-                </span>
-              ))}
-            </span>
-          ))}
+        <h1 className="hero-title">
+          <span className="visually-hidden">{title}</span>
+          <span className="hero-title-animation" aria-hidden="true">
+            {titleLines.map((line, lineIndex) => (
+              <span className="hero-title-line" key={`hero-line-${lineIndex}`}>
+                {line.words.map((word, wordIndex) => (
+                  <span
+                    className="hero-word"
+                    key={`${word}-${lineIndex}-${wordIndex}`}
+                    style={{ '--word-index': line.offset + wordIndex } as CSSProperties}
+                  >
+                    {word}
+                  </span>
+                ))}
+              </span>
+            ))}
+          </span>
         </h1>
 
         <div className="hero-footer">
@@ -60,6 +63,7 @@ export function Hero() {
             src="/assets/hero.jpeg"
             alt="Gabriel Silva sorrindo em um retrato casual"
             loading="eager"
+            fetchPriority="high"
           />
         </div>
         <figcaption>
