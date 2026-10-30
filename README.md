@@ -1,16 +1,54 @@
-# Meu Portfólio
+# Portfólio — Gabriel Silva
 
-Portfólio pessoal de Gabriel Silva, Desenvolvedor de Software.
+Portfólio pessoal de desenvolvimento de software, construído com **React 19, TypeScript 5 e Vite 7**. A interface segue uma direção visual editorial, com navegação responsiva, animações progressivas e seções de apresentação, projetos e contato.
 
-Projeto em React + TypeScript, inspirado na experiência visual do abn.ooo e adaptado para apresentar projetos, tecnologias, trajetória e contato.
+**Produção:** https://portfolio-gabriel-silva.up.railway.app/
 
-## Estrutura planejada
+## Pré-requisitos
 
-- Home / Hero
-- Sobre
-- Projetos em destaque
-- Outros projetos
-- Tecnologias
-- Contato
+- **Node.js 22** (veja `.nvmrc`)
+- **npm** (incluído no Node.js)
 
-A seção de projetos será expansível para receber novos trabalhos sem precisar refazer o layout.
+## Executar localmente
+
+```bash
+npm ci
+npm run dev
+```
+
+Acesse a URL informada pelo Vite no terminal.
+
+## Verificação e build
+
+```bash
+npm run build
+npm audit --audit-level=high
+npm run preview
+```
+
+O build executa a verificação TypeScript e gera os arquivos estáticos em `dist/`. O `package-lock.json` versionado garante que `npm ci` instale a árvore de dependências registrada. O GitHub Actions executa instalação reproduzível, auditoria de dependências e build a cada pull request para `main`.
+
+## Organização
+
+- `src/App.tsx`: composição das seções
+- `src/components/`: apresentação e comportamento da interface
+- `src/data/projects.ts`: dados e links dos projetos
+- `src/styles/`: estilos e responsividade
+- `public/`: imagens e assets públicos
+
+### Como adicionar um projeto
+
+1. Edite o array `projects` em `src/data/projects.ts`.
+2. Cadastre `title`, `description` e `technologies` e, quando houver evidência real, `github`, `demo` e `image`.
+3. Use `status` para distinguir projetos acadêmicos, destacados ou ainda em desenvolvimento; não anuncie protótipos conceituais como produtos finalizados.
+4. Execute `npm run build` e confira a apresentação em desktop e celular.
+
+## Projetos apresentados
+
+- **ZEUS Finance** — aplicação full stack com React, TypeScript, Node.js e PostgreSQL.
+- **Gestão e Monitoramento de Horta Urbana** — projeto acadêmico desktop em C#/.NET WinForms e SQL Server.
+- **ZEUS Agent** — estudo de arquitetura de atendimento empresarial assistido por IA, em desenvolvimento.
+
+## Publicação
+
+O Railway acompanha a branch `main` e publica novas versões após o merge. **Alterações de branches e PRs não afetam a produção** até serem integradas.

@@ -4,17 +4,24 @@ on:
   pull_request:
     branches: [main]
   push:
-    branches: [feat/consistent-section-fade]
+    branches: [main]
+
+permissions:
+  contents: read
 
 jobs:
-  build:
+  quality:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '22'
-      - name: Install dependencies
-        run: npm install --no-audit --no-fund
+          node-version-file: .nvmrc
+          cache: npm
+      - name: Install locked dependencies
+        run: npm ci --no-fund
+      - name: Dependency security audit
+        run: npm audit --audit-level=high
       - name: TypeScript and Vite build
         run: npm run build
