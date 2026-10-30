@@ -1,0 +1,23 @@
+# Dependências e artefatos de build
+node_modules/
+dist/
+dist-ssr/
+*.tsbuildinfo
+
+# Ambiente e segredos locais
+.env
+.env.*
+!.env.example
+
+# Arquivos locais de IDE e sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs e relatórios temporários
+*.log
+npm-debug.log*
+coverage/
+playwright-report/
+test-results/
