@@ -18,10 +18,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version-file: .nvmrc
+      - name: Use current npm release
+        run: npm install --global npm@11
       - name: Update npm lockfile for new test dependencies
         run: |
           rm -f package-lock.json
-          npm install --package-lock-only --ignore-scripts --no-audit --no-fund
+          npm install --package-lock-only --ignore-scripts --no-audit --no-fund || { tail -n 150 /home/runner/.npm/_logs/*debug-0.log; exit 1; }
       - name: Commit updated lockfile
         run: |
           git config user.name "github-actions[bot]"
