@@ -17,7 +17,7 @@ export const projects: Project[] = [
   {
     title: 'ZEUS Finance',
     description:
-      'Aplicação full stack de gestão financeira com autenticação, painel de gastos, dívidas, metas, orçamentos e persistência de dados.',
+      'Aplicação full stack de finanças pessoais com autenticação por sessão, regras financeiras no backend, PostgreSQL em produção e testes automatizados.',
     technologies: ['React', 'TypeScript', 'Node.js', 'PostgreSQL'],
     github: 'https://github.com/GBLSLVA/zeus-finance',
     demo: 'https://zeus-finance-production.up.railway.app',
@@ -32,14 +32,14 @@ export const projects: Project[] = [
   {
     title: 'Sistema de Gestão e Monitoramento de Horta Urbana',
     description:
-      'Projeto acadêmico interdisciplinar de uma aplicação desktop para registrar, organizar e acompanhar informações da gestão de uma horta urbana, passando por requisitos, UML, modelagem de dados, implementação em WinForms e persistência com SQL Server.',
+      'Sistema desktop de gestão de horta urbana em C# e WinForms, com análise de requisitos, modelagem UML e persistência de dados em SQL Server.',
     technologies: ['C#', '.NET / WinForms', 'SQL Server', 'UML'],
     status: 'Acadêmico',
   },
   {
     title: 'ZEUS Agent',
     description:
-      'Estudo de arquitetura para atendimento empresarial com IA, com foco em base de conhecimento, histórico, agenda, transferência humana e integrações com WhatsApp e Instagram.',
+      'Estudo de arquitetura de atendimento empresarial com IA, fluxos de supervisão humana, isolamento multiempresa e integrações planejadas com canais digitais.',
     technologies: ['IA', 'Arquitetura', 'APIs', 'Multiempresa'],
     github: 'https://github.com/GBLSLVA/ZEUS-AGENT',
     image: '/zeus-agent-preview.svg',
