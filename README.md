@@ -47,4 +47,6 @@ Leia [docs/AUDITORIA-2026-10-30.md](docs/AUDITORIA-2026-10-30.md) para achados, 
 
 ## Projetos
 
-A vitrine inclui ZEUS Finance, Horta Urbana e ZEUS Agent. Use somente links e capturas verificados; não apresente mockups como capturas reais. Atualize a stack tecnológica conforme a implementação real de cada projeto.
+A vitrine inclui ZEUS Finance, Horta Urbana e ZEUS Agent. Cada projeto pode ter um `caseStudy` opcional em `src/data/projects.ts`: a interface exibe um link editorial discreto, com conteúdo técnico expansível e fechado por padrão. A estrutura permite novos projetos sem editar o componente visual.
+
+Use somente links e capturas verificados; não apresente mockups como capturas reais. Atualize a stack tecnológica conforme a implementação real de cada projeto. O ZEUS Finance ainda exige autenticação para acesso à aplicação; a Horta Urbana ainda precisa de capturas reais do WinForms; o ZEUS Agent permanece identificado como estudo de arquitetura, sem aplicação executável.
