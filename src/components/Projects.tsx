@@ -107,6 +107,23 @@ export function Projects() {
                 </a>
               )}
             </div>
+
+            {project.caseStudy && (
+              <details className="project-case-study">
+                <summary>
+                  <span>Explorar o estudo de caso</span>
+                  <span className="project-case-study-toggle" aria-hidden="true">+</span>
+                </summary>
+                <div className="project-case-study-content">
+                  {project.caseStudy.map((part) => (
+                    <section className="project-case-study-part" key={part.label}>
+                      <h4>{part.label}</h4>
+                      <p>{part.text}</p>
+                    </section>
+                  ))}
+                </div>
+              </details>
+            )}
           </article>
         ))}
       </div>
