@@ -22,18 +22,21 @@ Acesse a URL informada pelo Vite no terminal.
 
 ```bash
 npm run build
+npm test
 npm audit --audit-level=high
 npm run preview
 ```
 
-O build executa a verificação TypeScript e gera os arquivos estáticos em `dist/`. O `package-lock.json` versionado garante que `npm ci` instale a árvore de dependências registrada. O GitHub Actions executa instalação reproduzível, auditoria de dependências e build a cada pull request para `main`.
+O teste automatizado verifica abertura, fechamento, Escape, foco e comportamento responsivo da navegação mobile.
+
+O build executa a verificação TypeScript e gera os arquivos estáticos em `dist/`. O `package-lock.json` versionado garante que `npm ci` instale a árvore de dependências registrada. O GitHub Actions executa instalação reproduzível, auditoria de dependências, testes de navegação e build a cada pull request para `main`.
 
 ## Organização
 
 - `src/App.tsx`: composição das seções
 - `src/components/`: apresentação e comportamento da interface
 - `src/data/projects.ts`: dados e links dos projetos
-- `src/styles/`: estilos e responsividade
+- `src/styles/`: estilos e responsividade, incluindo `navigation.css` para o menu
 - `public/`: imagens e assets públicos
 
 ### Como adicionar um projeto

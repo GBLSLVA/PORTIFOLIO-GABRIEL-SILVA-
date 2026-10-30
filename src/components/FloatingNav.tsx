@@ -1,4 +1,6 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+
+const MOBILE_MENU_QUERY = '(max-width: 720px)'
 
 const links = [
   { href: '#home', label: 'Início' },
@@ -8,9 +10,25 @@ const links = [
 ]
 
 export function FloatingNav() {
+  const [isMobile, setIsMobile] = useState(
+    () => window.matchMedia(MOBILE_MENU_QUERY).matches,
+  )
   const [isOpen, setIsOpen] = useState(false)
   const [active, setActive] = useState('#home')
   const [isScrolled, setIsScrolled] = useState(false)
+  const shellRef = useRef<HTMLElement>(null)
+  const toggleRef = useRef<HTMLButtonElement>(null)
+
+  useEffect(() => {
+    const query = window.matchMedia(MOBILE_MENU_QUERY)
+    const handleViewportChange = (event: MediaQueryListEvent) => {
+      setIsMobile(event.matches)
+      setIsOpen(false)
+    }
+
+    query.addEventListener('change', handleViewportChange)
+    return () => query.removeEventListener('change', handleViewportChange)
+  }, [])
 
   useEffect(() => {
     const sections = links
@@ -38,29 +56,44 @@ export function FloatingNav() {
   }, [])
 
   useEffect(() => {
-    const closeOnEscape = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') setIsOpen(false)
-    }
-
-    const onScroll = () => {
-      setIsScrolled(window.scrollY > 52)
-    }
+    const onScroll = () => setIsScrolled(window.scrollY > 52)
 
     onScroll()
-    window.addEventListener('keydown', closeOnEscape)
     window.addEventListener('scroll', onScroll, { passive: true })
-
-    return () => {
-      window.removeEventListener('keydown', closeOnEscape)
-      window.removeEventListener('scroll', onScroll)
-    }
+    return () => window.removeEventListener('scroll', onScroll)
   }, [])
+
+  useEffect(() => {
+    if (!isMobile || !isOpen) return
+
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key !== 'Escape') return
+      event.preventDefault()
+      setIsOpen(false)
+      toggleRef.current?.focus()
+    }
+
+    const closeOnOutsideClick = (event: PointerEvent) => {
+      if (event.target instanceof Node && !shellRef.current?.contains(event.target)) {
+        setIsOpen(false)
+      }
+    }
+
+    document.addEventListener('keydown', closeOnEscape)
+    document.addEventListener('pointerdown', closeOnOutsideClick)
+    return () => {
+      document.removeEventListener('keydown', closeOnEscape)
+      document.removeEventListener('pointerdown', closeOnOutsideClick)
+    }
+  }, [isMobile, isOpen])
 
   return (
     <header
+      ref={shellRef}
       className={`floating-nav-shell ${isOpen ? 'is-open' : ''} ${isScrolled ? 'is-scrolled' : ''}`}
     >
       <button
+        ref={toggleRef}
         className="floating-nav-toggle"
         type="button"
         aria-expanded={isOpen}
@@ -73,18 +106,23 @@ export function FloatingNav() {
         <span />
       </button>
 
-      <nav className="floating-nav" aria-label="Navegação principal">
+      <nav
+        id="floating-nav-menu"
+        className="floating-nav"
+        aria-label="Navegação principal"
+        inert={isMobile && !isOpen}
+      >
         <div className="nav-mark" aria-hidden="true">
           GS
         </div>
 
-        <ul id="floating-nav-menu">
+        <ul>
           {links.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
                 className={active === link.href ? 'active' : ''}
-                aria-current={active === link.href ? 'page' : undefined}
+                aria-current={active === link.href ? 'location' : undefined}
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
