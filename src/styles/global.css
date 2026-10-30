@@ -186,6 +186,8 @@ footer {
 .section {
   padding: 120px 0;
   border-top: 1px solid #111;
+  /* The Hero keeps its own effect; sections fade only when exiting the viewport. */
+  opacity: var(--section-exit-opacity, 1);
 }
 
 .section-heading {
@@ -411,6 +413,10 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .section {
+    opacity: 1 !important;
   }
 
   *,
