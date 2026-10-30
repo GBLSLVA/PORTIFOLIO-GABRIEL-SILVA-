@@ -19,7 +19,9 @@ jobs:
         with:
           node-version-file: .nvmrc
       - name: Update npm lockfile for new test dependencies
-        run: npm install --package-lock-only --ignore-scripts --no-audit --no-fund
+        run: |
+          rm -f package-lock.json
+          npm install --package-lock-only --ignore-scripts --no-audit --no-fund
       - name: Commit updated lockfile
         run: |
           git config user.name "github-actions[bot]"
