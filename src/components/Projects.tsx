@@ -90,7 +90,7 @@ export function Projects() {
                       <span aria-hidden="true">↗</span>
                     </div>
                     <div className="project-screen">
-                      <img src={project.image} alt={project.imageAlt ?? project.title} />
+                      <img src={project.image} alt={project.imageAlt ?? project.title} loading="lazy" decoding="async" />
                     </div>
                     <span className="project-orbit project-orbit--live">
                       {project.visualBadge ?? 'PREVIEW'}
@@ -102,6 +102,44 @@ export function Projects() {
                 </a>
               )}
             </div>
+
+            {project.caseStudy && (
+              <details className="project-case-study">
+                <summary>
+                  <span>Explorar estudo de caso</span>
+                  <span className="project-case-study-toggle" aria-hidden="true">+</span>
+                </summary>
+
+                <div className="project-case-study-content">
+                  <p className="project-case-study-intro">{project.caseStudy.intro}</p>
+                  <div className="project-case-study-grid">
+                    {project.caseStudy.parts.map((part) => (
+                      <div className="project-case-study-part" key={part.label}>
+                        <h4>{part.label}</h4>
+                        <p>{part.text}</p>
+                      </div>
+                    ))}
+                  </div>
+
+                  {project.caseStudy.evidence && (
+                    <div className="project-case-study-evidence">
+                      <strong>Evidências no código</strong>
+                      <div className="project-case-study-evidence-links">
+                        {project.caseStudy.evidence.map((item) => (
+                          <a href={item.href} key={item.href} target="_blank" rel="noreferrer">
+                            {item.label} <span aria-hidden="true">↗</span>
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {project.caseStudy.note && (
+                    <p className="project-case-study-note">{project.caseStudy.note}</p>
+                  )}
+                </div>
+              </details>
+            )}
           </article>
         ))}
       </div>

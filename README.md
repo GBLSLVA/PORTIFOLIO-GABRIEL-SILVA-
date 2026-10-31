@@ -35,16 +35,16 @@ O build executa a verificação TypeScript e gera os arquivos estáticos em `dis
 
 - `src/App.tsx`: composição das seções
 - `src/components/`: apresentação e comportamento da interface
-- `src/data/projects.ts`: dados e links dos projetos
+- `src/data/projects.ts`: dados, links e estudos de caso dos projetos
 - `src/styles/`: estilos e responsividade, incluindo `navigation.css` para o menu
 - `public/`: imagens e assets públicos
 
 ### Como adicionar um projeto
 
 1. Edite o array `projects` em `src/data/projects.ts`.
-2. Cadastre `title`, `description` e `technologies` e, quando houver evidência real, `github`, `demo` e `image`.
+2. Cadastre `title`, `description` e `technologies` e, quando houver evidência real, `github`, `demo` e `image`. Use `caseStudy` para registrar desafio, implementação, decisões técnicas e validação com textos verificáveis; links públicos para o código ficam em `caseStudy.evidence`.
 3. Use `status` para distinguir projetos acadêmicos, destacados ou ainda em desenvolvimento; não anuncie protótipos conceituais como produtos finalizados.
-4. Execute `npm run build` e confira a apresentação em desktop e celular.
+4. Execute `npm test` e `npm run build` e confira a apresentação em desktop e celular. Nunca invente métricas, capturas, repositórios ou contribuições.
 
 ## Projetos apresentados
 
