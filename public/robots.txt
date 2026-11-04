@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://portfolio-gabriel-silva.up.railway.app/sitemap.xml

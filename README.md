@@ -52,6 +52,14 @@ O build executa a verificação TypeScript e gera os arquivos estáticos em `dis
 - **Gestão e Monitoramento de Horta Urbana** — projeto acadêmico desktop em C#/.NET WinForms e SQL Server.
 - **ZEUS Agent** — estudo de arquitetura de atendimento empresarial assistido por IA, em desenvolvimento.
 
+## SEO e compartilhamento
+
+O site publica metadados Open Graph, Twitter Cards, JSON-LD, favicon SVG, `robots.txt` e `sitemap.xml`. Enquanto o domínio personalizado não for registrado e conectado, a URL canônica e os links públicos usam a hospedagem do Railway.
+
+**Ao ativar um domínio próprio**, atualize em conjunto `index.html`, `public/sitemap.xml`, `public/robots.txt` e o endereço de produção neste README; execute `npm test` para verificar a consistência.
+
+A imagem social atual utiliza a fotografia pública `/assets/hero.jpeg` (original do portfólio). Uma composição específica em 1200×630 pode substituí-la quando houver um asset aprovado. Não publique capturas de dashboards com informações reais de usuários.
+
 ## Publicação
 
 O Railway acompanha a branch `main` e publica novas versões após o merge. **Alterações de branches e PRs não afetam a produção** até serem integradas.
