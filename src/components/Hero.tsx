@@ -21,7 +21,9 @@ export function Hero() {
       </div>
 
       <div className="hero-content">
-        <p className="eyebrow hero-kicker">Gabriel Silva</p>
+        <p className="eyebrow hero-kicker">
+          Gabriel Silva <span className="hero-role">/ Desenvolvedor Full Stack Júnior</span>
+        </p>
 
         <h1 className="hero-title" aria-label={title}>
           {titleLines.map((line, lineIndex) => (
@@ -41,11 +43,17 @@ export function Hero() {
 
         <div className="hero-footer">
           <p>
-            React, JavaScript, Node.js, C#, SQL e projetos que continuam evoluindo.
+            Desenvolvimento Full Stack com React, TypeScript, Node.js e C#/.NET.
+            Projetos que conectam interface, regras de negócio e persistência.
           </p>
-          <a href="#projects" className="text-link">
-            Ver projetos <span aria-hidden="true">↘</span>
-          </a>
+          <div className="hero-actions">
+            <a href="#projects" className="text-link">
+              Ver projetos <span aria-hidden="true">↘</span>
+            </a>
+            <a href="#contact" className="text-link">
+              Entrar em contato <span aria-hidden="true">↗</span>
+            </a>
+          </div>
         </div>
 
         <div className="hero-scroll-cue" aria-hidden="true">
@@ -60,6 +68,7 @@ export function Hero() {
             src="/assets/hero.jpeg"
             alt="Gabriel Silva sorrindo em um retrato casual"
             loading="eager"
+            fetchPriority="high"
           />
         </div>
         <figcaption>
